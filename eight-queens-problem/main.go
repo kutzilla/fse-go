@@ -4,7 +4,7 @@ package main
 import "fmt"
 
 // Initialisierung des Schachfelds
-var field [8][8]bool
+var field [8][8] bool
 
 // Main-Methode
 func main() {
@@ -96,9 +96,9 @@ func printField() {
   for i := 0; i < len(field); i++ {
     for j := 0; j < len(field[i]); j++ {
       if field[i][j] {
-        fmt.Print("1  ")
+        fmt.Print("X  ")
       } else {
-        fmt.Print("0  ")
+        fmt.Print("O  ")
       }
     }
     fmt.Println("")
