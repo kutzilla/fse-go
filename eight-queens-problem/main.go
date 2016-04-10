@@ -39,12 +39,14 @@ func positionQueen(n int) bool {
         }
 
         // Der rekursive Aufruf war nicht erfolgreich, weshalb
-        // die Dame repositioniert werden muss
+        // die Dame entfernt werden muss
         field[j][i] = false
       }
     }
   }
 
+  // Im jetzigen Zustand des Felds kann keine weitere Dame positioniert
+  // werden, weshalb der laufende Rekursive Aufruf beendet wird
   return false
 }
 
