@@ -1,14 +1,16 @@
 package main
+
 import (
-  "fmt"
-  "os"
+	"fmt"
+	"os"
 )
-const greet ="Hello, "
+
+const greet = "Hello, "
 
 func main() {
-  var name string
-  name = os.Args[1]
+	var name string
+	name = os.Args[1]
 
-  greeting := greet + name
-  fmt.Println(greeting)
+	greeting := greet + name
+	fmt.Println(greeting)
 }
