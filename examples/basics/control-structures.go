@@ -4,8 +4,7 @@ import(
 )
 func main() {
   fmt.Println("Fahrt los...")
-  var i int = 1
-  for i<=3; i++ {
+  for i:= 1; i <= 3; i++ {
     // if-else Variante
     if i == 1{
       fmt.Println("eins da")
