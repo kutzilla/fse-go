@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 func adder() func(int) int {

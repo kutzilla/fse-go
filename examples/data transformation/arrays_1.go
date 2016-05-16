@@ -1,20 +1,22 @@
 package main
+
 import "fmt"
+
 func main() {
-	# String Array
+	// String Array
 	var a [2]string
 	a[0] = "Hello"
 	a[1] = "World"
 	fmt.Println(a[0], a[1])
 	fmt.Println(a)
 
-	#1. Float Array
-	x := [5]float64{ 1, 2, 3, 4, 5 }
+	// 1. Float64 Array
+	x := [5]float64{1, 2, 3, 4, 5}
 	for i := 0; i < len(x); i++ {
 		fmt.Println(x[i])
 	}
 
-	#2. Float Array
+	// 2. Float64 Array
 	y := [3]float64{
 		97,
 		98,

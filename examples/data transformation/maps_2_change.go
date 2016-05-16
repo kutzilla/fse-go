@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 func main() {
@@ -6,10 +7,10 @@ func main() {
 
 	// Wert zuweisen
 	m[11] = "Reus"
-  m[17] = "Aubameyang"
+	m[17] = "Aubameyang"
 	m[15] = "Hummels"
 
-  // Wert auslesen
+	// Wert auslesen
 	reus := m[11]
 	fmt.Println("Spieler mit der Nr. 11: ", reus)
 
@@ -17,8 +18,8 @@ func main() {
 	delete(m, 15)
 
 	v15, ok15 := m[15]
-	fmt.Println("Spieler mit der Nr. 15 vorhanden: ",v15, ok15)
+	fmt.Println("Spieler mit der Nr. 15 vorhanden: ", v15, ok15)
 
 	v17, ok17 := m[17]
-	fmt.Println("Spieler mit der Nr. 17 vorhanden: ",v17, ok17)
+	fmt.Println("Spieler mit der Nr. 17 vorhanden: ", v17, ok17)
 }

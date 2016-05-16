@@ -13,7 +13,7 @@ func main() {
 	y := make([]float64, 5, 10)
 
 	//Slice mit den Positionen 2 bis 5 aus y
-	z :=  y[2:5]
+	z := y[2:5]
 
-	fmt.Println(w,x,y,z)
+	fmt.Println(w, x, y, z)
 }
