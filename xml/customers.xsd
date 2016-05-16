@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) von Claus Grewe (Münster University of Applied Sciences) bearbeitet -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="customers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="customer" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name">
+								<xs:complexType>
+									<xs:attribute name="first" type="xs:string" use="required"/>
+									<xs:attribute name="middle" type="xs:string"/>
+									<xs:attribute name="family" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="address">
+								<xs:complexType>
+									<xs:attribute name="street" type="xs:string" use="required"/>
+									<xs:attribute name="houseNr" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="1"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="city" type="xs:string" use="required"/>
+									<xs:attribute name="zipCode" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:int">
+												<xs:totalDigits value="5"/>
+												<xs:pattern value="\d{5}"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="region" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="gender">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="male"/>
+										<xs:enumeration value="female"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="birthday" type="xs:date"/>
+							<xs:element name="subscription" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="imsi" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:maxLength value="15"/>
+												<xs:pattern value="26299\d+"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="msisdn" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:maxLength value="15"/>
+												<xs:pattern value="\d+"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="tariff" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
